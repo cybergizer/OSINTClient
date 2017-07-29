@@ -13,6 +13,3 @@ Sequel::Model.plugin :whitelist_security
 OSINTClient.db.extension :pg_inet
 
 require_relative 'app/models/domain.rb'
-
-ProcessWorker.perform_async
-SeedWorker.perform_async
