@@ -1,0 +1,15 @@
+# OSINT Client
+
+- git@github.com:cybergizer/OSINTClient.git 
+- bundle 
+- createdb rzh_development
+- bundle exec rake db:migrate
+- heroku create
+- git push heroku master
+# Ensure you're running at least one web worker
+- heroku ps:scale web=1
+- heroku addons:create redistogo:nano
+- heroku config:set REDIS_PROVIDER=REDISTOGO_URL
+- heroku addons:create heroku-postgresql:hobby-dev
+- heroku restart
+

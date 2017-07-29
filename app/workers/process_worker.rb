@@ -11,7 +11,7 @@ class ProcessWorker
     domains = JSON.parse(response)['domains']
     return if domains.empty?
     domain_name = domains.first['name']
-    # do something
+    #Put your code here 
     ip_ranges = []
     request_body = { 'domains' => { domain_name => ip_ranges } }
     RestClient.post(UPLOAD_URL, request_body.to_json, DEFAULT_HEADERS)
