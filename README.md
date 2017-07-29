@@ -25,6 +25,8 @@ Push latest changes of the code to the server
   - git push heroku master
 Ensure you're running at least one web worker
   - heroku ps:scale worker=1
+Run Migrations:
+  - heroku run rake db:migrate
 Restart the application
   - heroku restart
 
