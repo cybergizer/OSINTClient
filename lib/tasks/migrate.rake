@@ -1,7 +1,7 @@
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '../..'))
 require 'dotenv'
 require 'sequel'
-require_relative '../../initializers/osint_client.rb'
+require_relative '../../config/initializers/osint_client.rb'
 Dotenv.load
 
 namespace :db do
