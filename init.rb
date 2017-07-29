@@ -1,8 +1,8 @@
 require 'sidekiq'
+require 'sidekiq-cron'
 require 'dotenv'
 require 'sequel'
-require_relative 'app/workers/seed_worker.rb'
-require_relative 'app/workers/process_worker.rb'
+require 'rest-client'
 require_relative 'config/initializers/sidekiq.rb'
 require_relative 'config/initializers/osint_client.rb'
 
